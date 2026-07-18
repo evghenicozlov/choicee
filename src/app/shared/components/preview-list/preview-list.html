@@ -1,0 +1,27 @@
+<!-- <div class="preview">
+  <img
+    class="preview__image"
+    [src]="images()[(index() + images().length - 1) % images().length]"
+    alt=""
+  />
+</div>
+<div class="preview">
+  <img class="preview__image" [src]="images()[index()]" alt="" />
+</div>
+<div class="preview">
+  <img class="preview__image" [src]="images()[(index() + 1) % images().length]" alt="" />
+</div> -->
+<app-preview-list-item
+  class="preview"
+  [src]="images()[(index() + images().length - 1) % images().length]"
+  [leftEnable]="true"
+  (onLeftClick)="handleLeftClick()"
+/>
+<app-preview-list-item class="preview" [src]="images()[index()]" />
+<app-preview-list-item
+  class="preview"
+  [src]="images()[(index() + 1) % images().length]"
+  [rightEnable]="true"
+  (onRightClick)="handleRightClick()"
+/>
+{{ index() }}

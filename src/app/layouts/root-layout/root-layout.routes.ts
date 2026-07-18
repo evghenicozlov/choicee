@@ -5,8 +5,8 @@ import { SupportPage } from '@features/support/pages/support-page/support-page';
 import { TermsOfUsePage } from '@features/terms-of-use/pages/terms-of-use-page/terms-of-use-page';
 
 export const ROOT_LAYOUT_ROUTES: Routes = [
-  { path: '', component: MainPage },
-  { path: 'privacy-policy', component: PrivacyPolicyPage },
-  { path: 'terms-of-use', component: TermsOfUsePage },
-  { path: 'support', component: SupportPage },
+  { path: '', component: MainPage, title: 'Main' },
+  { path: 'privacy-policy', component: PrivacyPolicyPage, title: 'Privacy Policy' },
+  { path: 'terms-of-use', component: TermsOfUsePage, title: 'Terms of Use' },
+  { path: 'support', component: SupportPage, title: 'Support' },
 ];

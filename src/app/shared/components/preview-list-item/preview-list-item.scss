@@ -1,0 +1,49 @@
+:host {
+  position: relative;
+  display: flex;
+  border-radius: 4vw;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 1vw 1vw #00000080;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.image.animate {
+  transition: opacity 300ms ease;
+}
+.current {
+  position: relative;
+  opacity: 1;
+}
+.current.hidden {
+  opacity: 0;
+}
+
+.next {
+  position: absolute;
+  opacity: 0;
+}
+.next.visible {
+  opacity: 1;
+}
+
+.button {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.button-left {
+  left: 5%;
+}
+.button-right {
+  right: 5%;
+}

@@ -1,0 +1,12 @@
+<button
+  class="button"
+  [class.button--open]="open()"
+  [attr.aria-expanded]="open()"
+  [attr.aria-label]="open() ? 'Close navigation menu' : 'Open navigation menu'"
+  aria-haspopup="menu"
+  (click)="handleClick()"
+>
+  <span class="line"></span>
+  <span class="line"></span>
+  <span class="line"></span>
+</button>

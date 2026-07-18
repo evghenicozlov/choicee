@@ -1,0 +1,46 @@
+<header class="header">
+  <img class="logo" src="/images/logo.png" />
+  <div #container class="container">
+    @if (routes(); as routes) {
+      <ul #navList class="nav-list" [class.hidden]="isOverflow()">
+        @for (route of routes; track $index) {
+          <li>
+            <a
+              class="nav-list-item h1"
+              [routerLink]="route.path"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >{{ route.title }}</a
+            >
+          </li>
+        }
+      </ul>
+      @if (isOverflow()) {
+        <app-menu-button class="menu-button" [open]="menuOpen" (onClick)="handleMenuClick()" />
+      }
+    }
+  </div>
+</header>
+@if (isOverflow()) {
+  @if (routes(); as routes) {
+    <div
+      class="mobile-menu"
+      [class.mobile-menu--open]="menuOpen"
+      [style.--mobile-menu-height.px]="mobileListHeight() + 40"
+    >
+      <ul #mobileList class="mobile-list">
+        @for (route of routes; track $index) {
+          <li>
+            <a
+              class="mobile-list-item h2"
+              [routerLink]="route.path"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >{{ route.title }}</a
+            >
+          </li>
+        }
+      </ul>
+    </div>
+  }
+}

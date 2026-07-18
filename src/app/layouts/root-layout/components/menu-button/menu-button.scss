@@ -1,0 +1,48 @@
+.button {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  position: absolute;
+
+  width: 24px;
+  height: 2px;
+
+  border-radius: 999px;
+  background: #ffffff;
+
+  transition:
+    transform 250ms ease,
+    opacity 250ms ease,
+    top 250ms ease;
+}
+.line:nth-child(1) {
+  transform: translateY(-7px);
+}
+
+.line:nth-child(2) {
+  transform: translateY(0px);
+}
+
+.line:nth-child(3) {
+  transform: translateY(7px);
+}
+
+.button--open .line:nth-child(1) {
+  transform: rotate(45deg);
+}
+.button--open .line:nth-child(2) {
+  opacity: 0;
+}
+.button--open .line:nth-child(3) {
+  transform: rotate(-45deg);
+}

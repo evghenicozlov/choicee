@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'styles/fonts';
+@use 'styles/base/typography';
+
+:root {
+  --primary-color: #d5b25d;
+  --secondary-color: #2d481b;
+}
+
+body {
+  margin: 0px;
+}

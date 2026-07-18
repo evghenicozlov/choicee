@@ -1,0 +1,22 @@
+<img
+  class="image current"
+  [class.hidden]="transitioning()"
+  [class.animate]="transitioning()"
+  [src]="currentSrc()"
+  alt=""
+/>
+<img
+  class="image next"
+  [class.visible]="transitioning()"
+  [class.animate]="transitioning()"
+  [src]="nextSrc()"
+  alt=""
+  (load)="handleNextImageLoaded()"
+  (transitionend)="handleTransitionEnd()"
+/>
+@if (leftEnable()) {
+  <button class="button button-left" (click)="handleLeftClick()">Left</button>
+}
+@if (rightEnable()) {
+  <button class="button button-right" (click)="handleRightClick()">Right</button>
+}

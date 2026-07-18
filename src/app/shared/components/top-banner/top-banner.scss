@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  min-height: 120px;
+  max-height: 400px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0px 0px 5vw 5vw;
+  box-shadow: 0 8px 24px #00000080;
+}
+.background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.text {
+  position: absolute;
+
+  color: #ffffff;
+  font-size: 7vw;
+}
+.logo {
+  position: absolute;
+  width: 40vw;
+  max-width: 1410px;
+}
