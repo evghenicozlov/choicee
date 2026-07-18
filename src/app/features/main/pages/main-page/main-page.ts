@@ -10,12 +10,12 @@ import { TopBanner } from '@shared/components/top-banner/top-banner';
 })
 export class MainPage {
   readonly previews = [
-    '/images/previews/preview-en-iphone-1.jpg',
-    '/images/previews/preview-en-iphone-2.jpg',
-    '/images/previews/preview-en-iphone-3.jpg',
-    '/images/previews/preview-en-iphone-4.jpg',
-    '/images/previews/preview-en-iphone-5.jpg',
-    '/images/previews/preview-en-iphone-6.jpg',
-    '/images/previews/preview-en-iphone-7.jpg',
+    'images/previews/preview-en-iphone-1.jpg',
+    'images/previews/preview-en-iphone-2.jpg',
+    'images/previews/preview-en-iphone-3.jpg',
+    'images/previews/preview-en-iphone-4.jpg',
+    'images/previews/preview-en-iphone-5.jpg',
+    'images/previews/preview-en-iphone-6.jpg',
+    'images/previews/preview-en-iphone-7.jpg',
   ];
 }
